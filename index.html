@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="uxdxApp"  ng-controller="AppCtrl as app">
+  <head>
+    <title ng-bind="($title || 'Home') + ' - UXDX 2016 - The Team behind the Product - 2 November, Dublin'">UXDX 2016 - The Team behind the Product - 2 November, Dublin</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Join us on 2 November to learn the strategies and tactics for building high performing, efficient teams who can speed up the product delivery and learning cycles. Our focus is on self sufficient teams who own the end-to-end product life cycle with a particular focus on lean delivery, integrated UX, continuous delivery and automated DevOps deployments.">
+    <meta name="author" content="Initiate Network">
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'>
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,100italic,300italic'>
+
+
+    <link rel="stylesheet" href="./css/app.min.css"/>
+
+    <script type="text/javascript">
+        window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-bottom"};
+    </script>
+
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  </head>
+
+  <body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top" ng-class="navClass">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="app.isCollapsed = !app.isCollapsed">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" ui-sref="home" du-smooth-scroll>
+                <span class="logo-header">UXDX 2016 </span>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" collapse="app.isCollapsed">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden">
+                <a href="#page-top"></a>
+            </li>
+
+<!--                     <li><a du-smooth-scroll href="#survey">Survey</a></li> -->
+            <li><a ui-sref="about">About</a></li>
+            <li><a ui-sref="agenda">Agenda</a></li>
+            <li><a ui-sref="survey">Survey</a></li>
+            <li><a ui-sref="tickets">Tickets</a></li>
+            <li><a href="https://latest.uxdxconf.com" target="_blank">Blog</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+
+
+    <div ui-view autoscroll>
+
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <h2 class="section-heading">Sign Up for Updates</h2>
+                    <form id="mc-embedded-subscribe-form" action="//network.us13.list-manage.com/subscribe/post?u=1e15df91b3a8e4ca199a3e42b&amp;id=0e51377dd2" method="post" name="mc-embedded-subscribe-form" novalidate="" class="validate form-inline">
+
+                        <div class="form-group">
+                            <label for="MERGE1" class="sr-only">First Name</label>
+                            <input id="MERGE1" name="MERGE1" placeholder="First Name *" class="form-control" required data-validation-required-message="Please enter your first name.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="MERGE2" class="sr-only">Last Name</label>
+                            <input id="MERGE2" name="MERGE2" required="" placeholder="Last Name *" class="form-control" data-validation-required-message="Please enter your last name.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="MERGE0" class="sr-only">Email Address</label>
+                            <input id="MERGE0" type="email" name="MERGE0" required="" placeholder="Email Address *" class="form-control" data-validation-required-message="Please enter your email address.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div style="position: absolute; left: -5000px"><input name="b_1e15df91b3a8e4ca199a3e42b_0e51377dd2" tabindex="-1"></div>
+
+                        <div class="text-center">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-xl">Sign Me Up</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-xs-12 col-sm-5 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 padding-xs">
+                    <h2 class="section-heading">Connect &amp; Share</h2>
+                    <!-- <div class="contact-details">
+                      <i class="fa fa-envelope-o fa-2x"></i> <a href="mailto:connect@uxdxconf.com">connect@uxdxconf.com</a>
+                    </div>
+                    <div class="contact-details">
+                      <i class="fa fa-phone fa-2x"></i> +353 1 598 1838
+                    </div> -->
+                    <a class="btn btn-social-share" href="https://twitter.com/intent/tweet?text=Great%20lineup%20%40uxdxconf%20on%202%20Nov%2C%20Dublin.%20Design%2C%20Dev%20and%20Product%20leaders%20discuss%20how%20to%20build%20high%20performing%20teams.%20https%3A%2F%2Fuxdxconf.com&source=webclient" >
+                        <span> <i class="fa fa-twitter fa-2x"></i>Share on Twitter</span>
+                    </a>
+                    <a class="btn btn-social-share" href="https://www.facebook.com/sharer/sharer.php?u=http://www.uxdxconf.com/" >
+                        <i class="fa fa-facebook fa-2x"></i> <span>Share on Facebook</span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Initiate Network 2016</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://twitter.com/uxdxconf"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://facebook.com/uxdxconf"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.youtube.com/c/uxdxconf"><i class="fa fa-youtube"></i></a></li>
+                        <!--<li><a href="https://linkedin.com/company/uxdx"><i class="fa fa-linkedin"></i></a>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <!--<li><a href="#">Privacy Policy</a>-->
+                        <!--</li>-->
+                        <li><a ui-sref="terms">Terms &amp; Conditions</a>
+                        </li>
+                        <li><a ui-sref="anti-harassment">Anti-Harassment Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/restangular/1.5.2/restangular.min.js"></script>-->
+    <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.14.1/lodash.min.js"></script>-->
+    <script src='https://js.tito.io/v1' async></script>
+
+    <script src="js/vendors.js"></script>
+
+    <script src="js/app.js"></script>
+
+
+
+
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-78423296-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+
+  </body>
+</html>
