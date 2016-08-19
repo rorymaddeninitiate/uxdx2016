@@ -15,14 +15,18 @@
     <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic'>
     <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,100italic,300italic'>
 
-
     <link rel="stylesheet" href="./css/app.min.css"/>
 
-    <script type="text/javascript">
-        window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-bottom"};
-    </script>
 
+    <script type="text/javascript" src="https://latest.uxdxconf.com/shared/ghost-url.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <script type="text/javascript">
+      ghost.init({
+        clientId: "ghost-frontend",
+        clientSecret: "35e2d4887693"
+      });
+      window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-bottom"};
+    </script>
 
   </head>
 
@@ -54,7 +58,7 @@
             <li><a ui-sref="survey">Survey</a></li>
             <li><a href="https://latest.uxdxconf.com" target="_blank">Blog</a></li>
             <li><a ui-sref="exhibition" class="exhibition">Exhibition Enquiries</a></li>
-            <li><a ui-sref="tickets" class="tickets">Tickets</a></li>
+            <li><a ui-sref="tickets" class="tickets" ui-sref-opts="{reload: true, notify: true}">Tickets</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
