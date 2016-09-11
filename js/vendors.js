@@ -45,77 +45,8 @@ angular.module("ui.router.title", ["ui.router"])
 
 
 })(window.angular);
-/* angular-load.js / v0.4.1 / (c) 2014, 2015, 2016 Uri Shaked / MIT Licence */
-
-(function () {
-	'use strict';
-
-	angular.module('angularLoad', [])
-		.service('angularLoad', ['$document', '$q', '$timeout', function ($document, $q, $timeout) {
-			var document = $document[0];
-
-			function loader(createElement) {
-				var promises = {};
-
-				return function(url) {
-					if (typeof promises[url] === 'undefined') {
-						var deferred = $q.defer();
-						var element = createElement(url);
-
-						element.onload = element.onreadystatechange = function (e) {
-							if (element.readyState && element.readyState !== 'complete' && element.readyState !== 'loaded') {
-								return;
-							}
-
-							$timeout(function () {
-								deferred.resolve(e);
-							});
-						};
-						element.onerror = function (e) {
-							$timeout(function () {
-								deferred.reject(e);
-							});
-						};
-
-						promises[url] = deferred.promise;
-					}
-
-					return promises[url];
-				};
-			}
-
-			/**
-			 * Dynamically loads the given script
-			 * @param src The url of the script to load dynamically
-			 * @returns {*} Promise that will be resolved once the script has been loaded.
-			 */
-			this.loadScript = loader(function (src) {
-				var script = document.createElement('script');
-
-				script.src = src;
-
-				document.body.appendChild(script);
-				return script;
-			});
-
-			/**
-			 * Dynamically loads the given CSS file
-			 * @param href The url of the CSS to load dynamically
-			 * @returns {*} Promise that will be resolved once the CSS file has been loaded.
-			 */
-			this.loadCSS = loader(function (href) {
-				var style = document.createElement('link');
-
-				style.rel = 'stylesheet';
-				style.type = 'text/css';
-				style.href = href;
-
-				document.head.appendChild(style);
-				return style;
-			});
-		}]);
-})();
-
+!function(){"use strict";angular.module("angularLoad",[]).service("angularLoad",["$document","$q","$timeout",function(a,b,c){function d(a){var d={};return function(e){if("undefined"==typeof d[e]){var f=b.defer(),g=a(e);g.onload=g.onreadystatechange=function(a){g.readyState&&"complete"!==g.readyState&&"loaded"!==g.readyState||c(function(){f.resolve(a)})},g.onerror=function(a){c(function(){f.reject(a)})},d[e]=f.promise}return d[e]}}var e=a[0];this.loadScript=d(function(a){var b=e.createElement("script");return b.src=a,e.body.appendChild(b),b}),this.loadCSS=d(function(a){var b=e.createElement("link");return b.rel="stylesheet",b.type="text/css",b.href=a,e.head.appendChild(b),b})}])}();
+//# sourceMappingURL=angular-load.min.js.map
 /*
  * angular-markdown-directive v0.3.1
  * (c) 2013-2014 Brian Ford http://briantford.com
