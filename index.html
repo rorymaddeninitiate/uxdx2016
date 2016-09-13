@@ -70,6 +70,397 @@
 
 
     <div ui-view autoscroll>
+      <div ng-controller="HomeCtrl as home">
+        <header>
+            <div class="header-container">
+                <div class="container">
+                    <div class="intro-text">
+                        <!-- <span class="logo-header">UXDX</span> -->
+                        <!-- <svg width="300" height="300">
+                          <image xlink:href="./img/UXDX_logo.svg" width="300" height="300"class="header-logo"/>
+                        </svg> -->
+                        <!-- <svg><use xlink:href=“./img/UXDX_Logo.svg”  /></svg> -->
+                        <img src="./img/logo_white.png" class="header-logo">
+                        <p class="intro-details-text">2 November | RDS, Dublin </p>
+                        <div class="intro-details">
+                            <p class="intro-details-header">The Team behind the Product</p>
+                        </div>
+                        <a ui-sref="tickets" class="page-scroll btn btn-xl">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <section id="about">
+          <div class="container">
+            <div class="row">
+              <h1 class="section-heading text-center">UXDX Mission</h1>
+              <h3 class="section-sub-heading text-center">Removing waste in product delivery</h3>
+              <p class="text-center">At UXDX we focus on improving the team behind the product. This is centred on the following three key team efficiencies.</p>
+              <div class="about-list">
+                <div class="col-xs-12 col-sm-4 about-section">
+                  <div class="about-box">
+                    <div class="about-box-header first">
+                      <h4>Reduce External Dependencies</h4>
+                    </div>
+                    <div class="about-box-content">
+                      <p class="text-muted">Remove the bottleneck of handovers with cross functional teams of UX, Dev, QA and Product Owners.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 about-section">
+                  <div class="about-box">
+                    <div class="about-box-header second">
+                      <h4>Gather Early Feedback</h4>
+                    </div>
+                    <div class="about-box-content">
+                      <p class="text-muted">Reduce the build-measure-learn cycle time through continuous delivery and improved DX (developer experience).</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 about-section">
+                  <div class="about-box">
+                    <div class="about-box-header third">
+                      <h4>Infrastructure as Code</h4>
+                    </div>
+                    <div class="about-box-content">
+                      <p class="text-muted">Automate environment provisioning and utilise cloud infrastructure so the team can focus on the product and not the infrastructure.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section id="speakers">
+          <div class="container">
+            <div class="row">
+                <h1 class="text-center">Speakers</h1>
+                <div class="speaker-list">
+                  <a class="speaker-entry" ng-repeat="speaker in home.conference.speakers | published | orderBy: 'order'" ui-sref="speaker({speakerId: speaker._id})">
+                    <span class="imageContainer">
+                      <span class="speaker-images">
+                        <svg width="250" height="250">
+                          <image ng-attr-xlink:href="{{speaker.profilePic}}" xlink:href="" width="250" height="250" class="speaker-image"/>
+                        </svg>
+                        <!-- <img ng-src="{{speaker.profilePic}}" alt="{{speaker.first}} {{speaker.last}}" class="speaker-image"> -->
+                        <img ng-src="{{speaker.companyLogo}}" alt="{{speaker.company}}" class="speaker-logo" image-dimension ng-class="{'wide':    img.width/img.height > 1, 'tall': img.width/img.height <= 1}">
+                        <!-- <img src="./img/sponsors/designpartners.png" alt="Design Partners" class="speaker-logo wide"> -->
+                        <!-- <img ng-src="{{speaker.profilePic}}" alt="{{speaker.first}} {{speaker.last}}" class="speaker-image"> -->
+                      </span>
+                    </span>
+                    <div class="speaker-details">
+                       <h3 class="speaker-name">
+                        {{speaker.first}} {{speaker.last}}
+                      </h3>
+                      <h5 class="speaker-company">{{speaker.jobTitle}} at {{speaker.company}}</h5>
+                    <!-- <h5 class="speaker-country">{{speaker.country | countryCode}}</h5> -->
+                     <!-- <div class="share-widget">
+                      <a ng-if="speaker.twitter" href="{{speaker.twitter}}" target="_blank"><i class="fa fa-2x fa-twitter"></i></a>
+                      <a ng-if="speaker.linkedIn" href="{{speaker.linkedIn}}" target="_blank"><i class="fa fa-2x fa-linkedin-square"></i></a>
+                    </div> -->
+                   </div>
+                </a>
+              </div>
+            </div>
+        </section>
+
+
+        <section id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="section-heading text-center">What to Expect</h1>
+        <!--                     <h3 class="section-sub-heading text-center">Product Team Efficiencies</h3> -->
+                        <!-- <p class="text-muted">UXDX is all about the strategies and tactics for building high performing, efficient teams who can speed up the product delivery and learning cycles. Our focus is on self sufficient teams who own the end-to-end product life cycle with a particular focus on lean delivery, integrated UX, continuous delivery and automated DevOps deployments. </p> -->
+                    </div>
+                </div>
+                <div class="row padded-top-row col-xs-12">
+                    <div class="col-xs-12 col-md-6 about-iconText">
+                        <div class="col-xs-12 col-sm-2 col-sm-push-10 align-right">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-life-ring fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-xs-12 col-sm-10 col-sm-pull-2 align-right">
+                            <h4 class="service-heading">Deep Dives</h4>
+                            <p class="text-muted">Want to drill into specifics of a talk, or get advice on your own project? You might just have a question that’s better asked in an intimate, informal group. After each talk, the presenters will transition to the Deep Dive area which is more conducive to continuing the conversation between participants and presenters. The crowd drives the deep dive dialogue up to 30 mins.</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 about-iconText">
+                        <div class="col-xs-12 col-sm-2">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-xs-12 col-sm-10">
+                            <h4 class="service-heading">Speakers</h4>
+                            <p class="text-muted">13 leading designers, developers, and product owners will take to the UXDX stage to inspire you with their visions on product design and development. Our speakers will consist of a mix of both new startups who are launching a ground-breaking product for their industry to large corporations who have successfully sped up their release cycles. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 about-iconText">
+                        <div class="col-xs-12 col-sm-2 col-sm-push-10 align-right">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-share-alt fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-xs-12 col-sm-10 col-sm-pull-2 align-right">
+                            <h4 class="service-heading">Networking</h4>
+                            <p class="text-muted">UXDX is not just about great content - building a great team requires great people. We are incorporating Networking into everything that we do at the conference from sharing attendee details upfront, so you can make contact before the event, to interactive sessions during the day,  to the After Hours party with 800 of your new best friends.</p>
+        <!--                         <p class="text-muted">UXDX is not just about great content. In the spirit of building great teams and products, UXDX will feature a full day of team building and networking activities. You will work hard and play hard across the day with interactive breakouts, interactive sessions, happy hour, and one kick-ass after party at After Hours UXDX with 800 of your new best friends.</p> -->
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 about-iconText">
+                        <div class="col-xs-12 col-sm-2">
+                            <span class="fa-stack fa-2x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-clock-o fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </div>
+                        <div class="col-xs-12 col-sm-10">
+                            <h4 class="service-heading">Office Hours</h4>
+                            <p class="text-muted">A free, intensive, 30 minute consultation. The Office Hours space will include experts in design, engineering, development and product management that provides you with unfiltered, objective, and actionable advice; from onboarding issues to speeding up your release cycle. Your chosen expert will ensure you walk out the door with actionable items to address. </p>
+
+        <!--                         <p class="text-muted">Whether you’re involved in designing, developing, launching, or growing a product or service, this will be a sell-out experience, so register your interest now.</p> -->
+                        </div>
+                    </div>
+
+        <!--                 <div class="row about-iconText">
+                        <div class="col-xs-12 col-sm-3 col-md-2">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-lightbulb-o fa-stack-1x fa-inverse text-primary"></i>
+                            </span>
+                        </div>
+                        <div class="col-xs-12 col-sm-9 col-md-10">
+                            <h4 class="service-heading">Product Showcase</h4>
+                            <p class="text-muted">How does your salary compare by role, skill set and work experience?</p>
+                        </div>
+                    </div>
+                    <div class="row about-iconText">
+                        <div class="col-xs-12 col-sm-3 col-md-2 col-sm-push-9 col-md-push-10 align-right">
+                            <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-beer fa-stack-1x fa-inverse text-primary"></i>
+                            </span>
+                        </div>
+                        <div class="col-xs-12 col-sm-9 col-md-10 col-sm-pull-3 col-md-pull-2 align-right">
+                            <h4 class="service-heading">PubX</h4>
+                            <p class="text-muted">How does your salary compare by role, skill set and work experience?</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="news" ng-if="home.conference.news">
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="text-center" >Latest News</h1>
+                    <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
+                </div>
+            </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4" ng-repeat="post in home.conference.news.posts">
+                  <a ng-href="{{home.blog + post.url}}" target="_blank">
+                    <img class="newsImage" ng-src="{{home.blog + post.image}}" alt="{{post.meta_title}}">
+                    <p class="newsTitle">{{post.meta_title}}</p>
+                    <p class="newsDescription text-muted">{{post.meta_description}}</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section id="contact" ng-if="home.conference.news">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                      <h3>Get Updates and News</h3>
+                        <form id="mc-embedded-subscribe-form" action="//network.us13.list-manage.com/subscribe/post?u=1e15df91b3a8e4ca199a3e42b&amp;id=0e51377dd2" method="post" name="mc-embedded-subscribe-form" novalidate="" class="validate form-inline">
+
+                            <div class="form-group">
+                                <label for="MERGE1" class="sr-only">First Name</label>
+                                <input id="MERGE1" name="MERGE1" placeholder="First Name *" class="form-control input-lg" required data-validation-required-message="Please enter your first name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="MERGE2" class="sr-only">Last Name</label>
+                                <input id="MERGE2" name="MERGE2" required="" placeholder="Last Name *" class="form-control" data-validation-required-message="Please enter your last name.">
+                                <p class="help-block text-danger"></p>
+                            </div> -->
+                            <div class="form-group">
+                                <label for="MERGE0" class="sr-only">Email Address</label>
+                                <input id="MERGE0" type="email" name="MERGE0" required="" placeholder="Email Address *" class="form-control input-lg" data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div style="position: absolute; left: -5000px"><input name="b_1e15df91b3a8e4ca199a3e42b_0e51377dd2" tabindex="-1"></div>
+
+                            <button type="submit" class="btn btn-lg btn-xl-inverse">Sign Me Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="venue">
+          <div class="container text-center">
+            <div class="row">
+              <h1>Venues</h1>
+              <div class="col-xs-12 col-sm-6 social">
+                <h2>Pre-Party <br><span class="small">1st November</span></h2>
+                <p>Various venues around Dublin</p>
+                <a href="https://www.google.ie/maps/place/Temple+Bar,+Dublin/@53.3451022,-6.2681806,16z/data=!4m5!3m4!1s0x48670e9cb559ea73:0x2600c7a819c83012!8m2!3d53.3450903!4d-6.2638032" target="_blank">
+                  <div class="map"></div>
+                </a>
+              </div>
+              <div class="col-xs-12 col-sm-6 venue">
+                <h2>Conference <br><span class="small">2nd November</span></h2>
+                <p>RDS, Ballsbridge, Dublin 4</p>
+                <a href="https://www.google.ie/maps/place/Royal+Dublin+Society,+Anglesea+Rd,+Dublin+4/data=!4m2!3m1!1s0x48670ec6619efbb3:0xfa61b5a0f8f9f2f5?sa=X&ved=0ahUKEwjCvbPv3efOAhXjIMAKHZmPCBUQ8gEIMTAD" target="_blank">
+                  <div class="map"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="partners">
+          <div class="container text-center">
+            <div class="row">
+              <h1>Supported By</h1>
+              <div class="partner-list">
+                <!-- <a ui-sref="sponsor({id: partner.objectId})" class="center-block"> -->
+                  <img src="./img/sponsors/designpartners.png" alt="Design Partners" class="supporter wide">
+                  <img src="./img/sponsors/Atlantic_Bridge.png" alt="Atlantic Bridge" class="supporter">
+                  <img src="./img/sponsors/DJEI.jpg" alt="Department of Jobs, Enterprise and Innovation" class="supporter wide2x">
+                  <img src="./img/sponsors/DublinUX.jpeg" alt="Dublin UX" class="supporter">
+                  <img src="./img/sponsors/Intel.png" alt="Intel" class="supporter">
+                  <img src="./img/sponsors/NDRC.png" alt="NDRC" class="supporter">
+                  <img src="./img/sponsors/Riot_Games.png" alt="Riot Games" class="supporter">
+                  <img src="./img/sponsors/Deposify.png" alt="Deposify" class="supporter">
+              </div>
+            </div>
+
+            <!-- <div  class="row"  ng-if="main.sponsors.gold.length > 0">
+              <h1>In Partnership with</h1>
+              <h2>Gold Sponsors</h2>
+              <partner-box partners="main.sponsors.gold" level="gold" class="row row-flex row-flex-wrap" ></partner-box>
+            </div>
+
+             <div class="row"  ng-if="main.sponsors.silver.length > 0">
+              <h2>Silver Sponsors</h2>
+              <partner-box partners="main.sponsors.silver" level="gold" class=" row row-flex row-flex-wrap"></partner-box>
+            </div>
+             <div class="row"  ng-if="main.sponsors.bronze.length > 0">
+              <h2>Bronze Sponsors</h2>
+              <partner-box partners="main.sponsors.bronze" level="gold" class=" row row-flex row-flex-wrap"></partner-box>
+            </div> -->
+
+
+            <!-- <div class="row"  ng-if="main.sponsors.media.length > 0">
+              <h1>Media Partner</h1>
+              <partner-box partners="main.sponsors.media" level="gold row row-flex row-flex-wrap"></partner-box>
+            </div> -->
+          </div>
+        </section>
+
+
+        <section id="partnerOpportunities">
+          <div class="container text-center">
+            <div class="row">
+              <h2>Partnership Opportunities</h2>
+              <p>There are a range of partnership opportunities available from exhibition space to event sponsorship.</p>
+              <a ui-sref="exhibition" class="btn btn-xl-inverse">Sponsorship and Exhibition Opportunities</a>
+              <!-- <p>We work with you to tailor a package that meets your needs. We know that marketing is data-driven and you need to validate your return on investment so as part of every sponsorship package we will share a post show report that details the success and exposure of each of our marketing initiatives.</p>
+              <p>Please contact <a href="mailto:sponsorship@exportleadership.com">sponsorship@exportleadership.com</a> to find out more information.</p> -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Tickets Grid Section -->
+         <section id="tickets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="text-center">Tickets</h1>
+                        <h3>Have a question for our support team?</h3>
+                        <p>Call us on +353 1 598 1838</p>
+                    </div>
+                </div>
+                <div class="row ticket-row">
+                    <div class="col-xs-12 col-sm-3">
+                        <div class="ticket-box ticket-faded sold">
+                            <div class="ticket-header">
+                                <p class="ticket-name">Super Early</p>
+                            </div>
+                            <div class="ticket-details">
+                                <!-- <p class="ticket-cost">€125</p>
+                                <p class="ticket-exvat">€102 Ex VAT</p>
+                                <p class="ticket-description">(Ends on 19/08/2016)</p> -->
+                            </div>
+                            <div class="ticket-footer">
+                              <button class="ticket-button btn">Sold Out</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <div class="ticket-box ticket-primary">
+                            <div class="ticket-header">
+                                <p class="ticket-name">Early</p>
+                            </div>
+                            <div class="ticket-details">
+                                <p class="ticket-cost">€195</p>
+                                <p class="ticket-exvat">€159 Ex VAT</p>
+                                <!-- <p class="ticket-description">(Ends on 28/09/2016)</p> -->
+                            </div>
+                            <div class="ticket-footer">
+                              <a href="https://ti.to/initiate/uxdx-2016/with/fgctdpcyifg" class="tito-button">
+                                <tito-button event="initiate/uxdx-2016" releases="fgctdpcyifg" ssl-check-disabled>Book Now</tito-button>
+                              </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <div class="ticket-box">
+                            <div class="ticket-header">
+                                <p class="ticket-name">Regular</p>
+                            </div>
+                            <div class="ticket-details">
+                                <p class="ticket-cost">€295</p>
+                                <p class="ticket-exvat">€240 Ex VAT</p>
+                                <!-- <p class="ticket-description">(Ends on 19/10/2016)</p> -->
+                            </div>
+                            <div class="ticket-footer">
+                                <button class="ticket-button btn">Coming Soon</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-3">
+                        <div class="ticket-box">
+                            <div class="ticket-header">
+                                <p class="ticket-name">Late</p>
+                            </div>
+                            <div class="ticket-details">
+                                <p class="ticket-cost">€350</p>
+                                <p class="ticket-exvat">€285 Ex VAT</p>
+                            </div>
+                            <div class="ticket-footer">
+                                <button class="ticket-button btn">Coming Soon</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </div>
 
     </div>
 
@@ -154,6 +545,21 @@
       ga('send', 'pageview');
 
     </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1081444315278926');
+    fbq('track', "PageView");</script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1081444315278926&ev=PageView&noscript=1"
+    /></noscript>
+<!-- End Facebook Pixel Code -->
 
 
   </body>
