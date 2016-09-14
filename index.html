@@ -36,9 +36,8 @@
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
         if (redirect && redirect != location.href) {
-          history.replaceState(null, null, '#/' + redirect);
-        }
-        else {
+          var page = redirect.replace('https://uxdxconf.com/', '');
+          history.replaceState(null, null, '#/' + page);
         }
       })();
     </script>
