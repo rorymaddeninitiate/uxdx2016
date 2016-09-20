@@ -348,6 +348,20 @@ angular.module('app.filters', [])
     return '@' + sections[sections.length -1];
   };
 }])
+
+.filter('remainingTime', function () {
+  return function (seconds) {
+    var days = Math.floor(seconds / (60*60*1000*24));
+    // var hours = Math.floor(seconds / (60*60*1000));
+    var hours = Math.floor((seconds % (60*60*1000*24)) / (60*60*1000));
+    var minutes = Math.floor((seconds % (60*60*1000)) / (60*1000));
+    var seconds = Math.floor(((seconds % (60*60*1000)) % (60*1000)) / 1000);
+    var string =  days > 0 ? days + ' days, ' : '';
+    string +=  hours > 0 ? hours + ' hours, ' : '';
+    string += minutes + ' minutes and ' + seconds + ' seconds';
+    return string;
+  }
+})
 ;
 
 
@@ -448,7 +462,7 @@ angular.module('home', ['constants', 'app.filters'])
     ;
 })
 // .controller('HomeCtrl', function ($http, BLOG_API, BLOG_URL, conference, $sce) {
-.controller('HomeCtrl', function ($http, BLOG_API, BLOG_URL, conferenceService, $sce) {
+.controller('HomeCtrl', function ($http, BLOG_API, BLOG_URL, conferenceService, $sce, $timeout) {
   'ngInject';
   // this.news = news;
   var self = this;
@@ -475,6 +489,14 @@ angular.module('home', ['constants', 'app.filters'])
     })
   });
 
+  var targetTime = 1475060400000;
+  var now = new Date();
+  this.counter = targetTime - Date.now();
+  this.onTimeout = function(){
+      self.counter = targetTime - Date.now();
+      mytimeout = $timeout(self.onTimeout,1000);
+  }
+  var mytimeout = $timeout(this.onTimeout,1000);
 
 
 })
