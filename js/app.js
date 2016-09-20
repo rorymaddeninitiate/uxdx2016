@@ -489,7 +489,7 @@ angular.module('home', ['constants', 'app.filters'])
     })
   });
 
-  var targetTime = 1475060400000;
+  var targetTime = 1474999200000;
   var now = new Date();
   this.counter = targetTime - Date.now();
   this.onTimeout = function(){

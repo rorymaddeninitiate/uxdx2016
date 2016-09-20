@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Join us at UXDX on 2 November to learn the strategies and tactics for building high performing, cross functional teams of designers and developers to speed up your product delivery and learning cycles. ">
+    <meta name="description" content="Join us at UXDX conference on 2 November to learn the strategies and tactics for building high performing, cross functional teams. UXDX will feature designers and developers sharing their insights on speeding up product delivery and learning cycles. ">
     <meta name="author" content="Initiate Network">
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -412,6 +412,10 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h1 class="text-center">Tickets</h1>
+                        <p class="countdown" ng-if="home.counter > 0">
+                          <span class="intro">Ticket prices increase by €100 in</span><br>
+                          <span class="ticker">{{home.counter | remainingTime}}</span>
+                        </p>
                         <h3>Have a question for our support team?</h3>
                         <p>Call us on +353 1 598 1838</p>
                     </div>
