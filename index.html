@@ -350,15 +350,18 @@
         <section id="partners">
           <div class="container text-center">
             <div class="row">
-              <!-- <h1>Supported By</h1>
-              <div class="flex" ng-repeat="sponsor in home.conference.sponsors">
-                <a ui-sref="sponsor({sponsorId: sponsor._id})">{{sponsor.name}}</a>
-                <a ui-sref="sponsor({sponsorId: sponsor._id})"><img ng-src="{{sponsor.companyLogo}}" alt="{{sponsor.name}}" class="supporter" image-dimension ng-class="{'wide':    img.width/img.height > 1, 'tall': img.width/img.height <= 1}"></a>
-              </div> -->
-
-              <h1>Supported By</h1>
+              <h1>Sponsored By</h1>
+              <!-- <div class="flex" ng-repeat="sponsor in home.conference.sponsors"> -->
               <div class="partner-list">
-                <!-- <a ui-sref="sponsor({id: partner.objectId})" class="center-block"> -->
+                <a ng-repeat="sponsor in home.conference.sponsors | orderBy: 'order'" ui-sref="sponsor({sponsorId: sponsor._id})">
+                  <img ng-src="{{sponsor.companyLogo}}" alt="{{sponsor.name}}" class="supporter" image-dimension>
+                </a>
+
+              </div>
+              <!-- </div> -->
+
+              <!-- <h1>Supported By</h1>
+              <div class="partner-list">
                   <img src="./img/sponsors/designpartners.png" alt="Design Partners" class="supporter wide">
                   <img src="./img/sponsors/Atlantic_Bridge.png" alt="Atlantic Bridge" class="supporter">
                   <img src="./img/sponsors/DJEI.jpg" alt="Department of Jobs, Enterprise and Innovation" class="supporter wide2x">
@@ -367,7 +370,7 @@
                   <img src="./img/sponsors/NDRC.png" alt="NDRC" class="supporter">
                   <img src="./img/sponsors/Riot_Games.png" alt="Riot Games" class="supporter">
                   <img src="./img/sponsors/Deposify.png" alt="Deposify" class="supporter">
-              </div>
+              </div> -->
             </div>
 
             <!-- <div  class="row"  ng-if="main.sponsors.gold.length > 0">
