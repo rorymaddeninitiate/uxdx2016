@@ -608,6 +608,15 @@ angular.module('tickets', [])
         // });
     // });
 
+  var targetTime = 1475258400000;
+  var now = new Date();
+  this.counter = targetTime - Date.now();
+  this.onTimeout = function(){
+      self.counter = targetTime - Date.now();
+      mytimeout = $timeout(self.onTimeout,1000);
+  }
+  var mytimeout = $timeout(this.onTimeout,1000);
+
 })
 ;
 

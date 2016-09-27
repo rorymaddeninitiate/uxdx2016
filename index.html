@@ -430,9 +430,9 @@
                                 <p class="ticket-name">Super Early</p>
                             </div>
                             <div class="ticket-details">
-                                <!-- <p class="ticket-cost">€125</p>
+                                <p class="ticket-cost">€125</p>
                                 <p class="ticket-exvat">€102 Ex VAT</p>
-                                <p class="ticket-description">(Ends on 19/08/2016)</p> -->
+                                <!-- <p class="ticket-description">(Ends on 19/08/2016)</p> -->
                             </div>
                             <div class="ticket-footer">
                               <button class="ticket-button btn">Sold Out</button>
@@ -450,7 +450,8 @@
                                 <!-- <p class="ticket-description">(Ends on 28/09/2016)</p> -->
                             </div>
                             <div class="ticket-footer">
-                              <a href="https://ti.to/initiate/uxdx-2016/with/fgctdpcyifg" class="tito-button">
+                              <button ng-if="home.counter < 0" class="ticket-button btn">Sold Out</button>
+                              <a ng-if="home.counter > 0" href="https://ti.to/initiate/uxdx-2016/with/fgctdpcyifg" class="tito-button">
                                 <tito-button event="initiate/uxdx-2016" releases="fgctdpcyifg" ssl-check-disabled>Book Now</tito-button>
                               </a>
                             </div>
@@ -467,7 +468,10 @@
                                 <!-- <p class="ticket-description">(Ends on 19/10/2016)</p> -->
                             </div>
                             <div class="ticket-footer">
-                                <button class="ticket-button btn">Coming Soon</button>
+                                <button ng-if="home.counter > 0" class="ticket-button btn">Coming Soon</button>
+                                <a ng-if="home.counter < 0" href="https://ti.to/initiate/uxdx-2016/with/ngb3s1br8ag" class="tito-button">
+                                  <tito-button event="initiate/uxdx-2016" releases="fgctdpcyifg" ssl-check-disabled>Book Now</tito-button>
+                                </a>
                             </div>
                         </div>
                     </div>
