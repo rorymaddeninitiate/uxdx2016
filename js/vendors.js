@@ -72,7 +72,7 @@ angular.module('btford.markdown', ['ngSanitize']).
       restrict: 'AE',
       link: function (scope, element, attrs) {
         if (attrs.btfMarkdown) {
-          console.log(attrs.btfMarkdown)
+          // console.log(attrs.btfMarkdown)
           scope.$watch(attrs.btfMarkdown, function (newVal) {
             var html = newVal ? $sanitize(markdownConverter.makeHtml(newVal)) : '';
             element.html(html);
