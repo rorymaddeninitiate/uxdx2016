@@ -16,7 +16,7 @@
     <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,100italic,300italic'>
 
 
-    <link rel="stylesheet" href="css/combined-ac9495e5ad.css">
+    <link rel="stylesheet" href="css/combined-3e4df8c44b.css">
 
     <!-- <script type="text/javascript" src="https://latest.uxdxconf.com/shared/ghost-url.min.js"></script> -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
@@ -95,7 +95,21 @@
                         <img src="./img/logo_white.png" class="header-logo">
                         <p class="intro-details-text">2 November | RDS, Dublin </p>
                         <div class="intro-details">
-                            <p class="intro-details-header">The Team behind the Product</p>
+                            <p class="intro-details-header">
+                              Accelerating Product Success
+                              <!-- <span class="typing-text" ng-class="{'finished': home.isFinishedTyping}" ng-cloak>
+                                <typer
+                                  words="home.headerWords"
+                                  type-time='150'
+                                  backspace-time='500'
+                                  start-delay='1500'
+                                  pause='1500'
+                                  highlight-background='#000000'
+                                  repeat= 'false'
+                                  on-complete="home.isFinishedTyping = true">
+                                </typer>
+                              </span> -->
+                            </p>
                             <p class="countdown" ng-if="home.counter > 0" ng-cloak>
                               <span class="intro">Ticket prices increase in</span><br>
                               <span class="ticker">{{home.counter | remainingTime}}</span>
@@ -113,19 +127,29 @@
             <div class="row">
               <h1 class="section-heading text-center">UXDX Mission</h1>
               <h3 class="section-sub-heading text-center">Removing waste in product delivery</h3>
-              <p class="text-center">At UXDX we focus on improving the team behind the product. This is centred on the following three key team efficiencies.</p>
+              <p class="text-center">At UXDX we are commited to helping teams shorten the time to product success. This is centred on the following four key efficiencies.</p>
               <div class="about-list">
-                <div class="col-xs-12 col-sm-4 about-section">
+                <div class="col-xs-12 col-sm-6 col-md-3 about-section">
                   <div class="about-box">
-                    <div class="about-box-header first">
-                      <h4>Reduce External Dependencies</h4>
+                    <div class="about-box-header fourth">
+                      <h4>Integrated UX</h4>
                     </div>
                     <div class="about-box-content">
-                      <p class="text-muted">Remove the bottleneck of handovers with cross functional teams of UX, Dev, QA and Product Owners.</p>
+                      <p class="text-muted">Place the user at the forefront of all decisions to remove the waste of unnecessary rework.</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 about-section">
+                  <div class="col-xs-12 col-sm-6 col-md-3 about-section">
+                    <div class="about-box">
+                      <div class="about-box-header first">
+                        <h4>Reduce External Dependencies</h4>
+                      </div>
+                      <div class="about-box-content">
+                        <p class="text-muted">Remove the bottleneck of handovers with cross functional teams of UX, Dev, QA and Product Owners.</p>
+                      </div>
+                    </div>
+                  </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 about-section">
                   <div class="about-box">
                     <div class="about-box-header second">
                       <h4>Gather Early Feedback</h4>
@@ -135,7 +159,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 about-section">
+                <div class="col-xs-12 col-sm-6 col-md-3 about-section">
                   <div class="about-box">
                     <div class="about-box-header third">
                       <h4>Automating Infrastructure</h4>
@@ -275,6 +299,20 @@
                     </div> -->
                 </div>
             </div>
+        </section>
+
+        <section id="featuredAttendees">
+          <div class="container text-center">
+            <div class="row">
+              <h1>Network with people from the following companies</h1>
+              <!-- <div class="flex" ng-repeat="sponsor in home.conference.sponsors"> -->
+              <div class="partner-list">
+                <div ng-repeat="attendee in home.featuredAttendees | orderBy: 'order'">
+                  <img ng-src="{{attendee.companyLogo}}" alt="{{attendee.company}}" class="supporter" image-dimension>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="news" ng-if="home.conference.news">
@@ -550,7 +588,7 @@
     </svg>
 
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
@@ -561,9 +599,9 @@
     <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.14.1/lodash.min.js"></script>-->
     <!-- <script src='https://js.tito.io/v1' async></script> -->
 
-    <script src="js/vendors-3875bd6931.js"></script>
+    <script src="js/vendors-2b99bcac3a.js"></script>
 
-    <script src="js/app-3fb798b413.js"></script>
+    <script src="js/app-61c574da47.js"></script>
 
 
 
