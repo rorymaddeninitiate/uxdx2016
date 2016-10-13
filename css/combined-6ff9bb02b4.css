@@ -498,8 +498,7 @@ section#speakers .speaker-list {
 section#speaker .speaker-image {
   width: 250px;
   height: 250px;
-  -webkit-clip-path: url(#polygonPath);
-  clip-path: url(#polygonPath); }
+  margin: 20px 0px; }
 
 section#speaker .speaker-logo {
   width: 100px;
@@ -532,7 +531,8 @@ section#speakersPage .speakerRow {
 
 section#speakersPage .speaker-image {
   width: 150px;
-  height: 150px; }
+  height: 150px;
+  margin: 20px 0px; }
 
 section#speakersPage .speaker-logo {
   width: 90px;
@@ -543,7 +543,11 @@ section#speakersPage .speaker-logo {
 section#speakersPage .speaker-name {
   font-size: 2em;
   font-weight: 400;
-  margin-top: 0px; }
+  margin-top: 0px;
+  color: #333; }
+  section#speakersPage .speaker-name.hover {
+    text-decoration: none;
+    color: #333; }
   section#speakersPage .speaker-name .surname {
     color: #015669; }
 
