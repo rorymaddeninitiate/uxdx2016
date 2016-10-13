@@ -16,7 +16,7 @@
     <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,100italic,300italic'>
 
 
-    <link rel="stylesheet" href="css/combined-3e4df8c44b.css">
+    <link rel="stylesheet" href="css/combined-81e307dc39.css">
 
     <!-- <script type="text/javascript" src="https://latest.uxdxconf.com/shared/ghost-url.min.js"></script> -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
@@ -67,6 +67,7 @@
 <!--                     <li><a du-smooth-scroll href="#survey">Survey</a></li> -->
             <!-- <li><a ui-sref="about">About</a></li> -->
             <li><a ui-sref="agenda">Agenda</a></li>
+            <li><a ui-sref="speakers">Speakers</a></li>
             <li><a ui-sref="sponsors">Sponsors</a></li>
             <li><a ui-sref="attendees">Attendees</a></li>
             <li><a href="https://latest.uxdxconf.com" target="_blank">Blog</a></li>
@@ -92,9 +93,18 @@
                           <image xlink:href="./img/UXDX_logo.svg" width="300" height="300"class="header-logo"/>
                         </svg> -->
                         <!-- <svg><use xlink:href=“./img/UXDX_Logo.svg”  /></svg> -->
-                        <img src="./img/logo_white.png" class="header-logo">
-                        <p class="intro-details-text">2 November | RDS, Dublin </p>
+                        <div class="row header-flex">
+                          <div class="header-logo">
+                            <img src="./img/logo_white.png">
+                          </div>
+                          <div class="header-details">
+                            <p>
+                              <span class="intro-details-text">User Experience | Developer Experience</span> <br>
+                              <span>2 November - RDS, Dublin</span></p>
+                          </div>
+                        </div>
                         <div class="intro-details">
+                          <!-- <p class="intro-details-name">User Experience | Developer Experience</p> -->
                             <p class="intro-details-header">
                               Accelerating Product Success
                               <!-- <span class="typing-text" ng-class="{'finished': home.isFinishedTyping}" ng-cloak>
@@ -111,7 +121,7 @@
                               </span> -->
                             </p>
                             <p class="countdown" ng-if="home.counter > 0" ng-cloak>
-                              <span class="intro">Ticket prices increase in</span><br>
+                              <span class="intro">Ticket prices increase in</span>
                               <span class="ticker">{{home.counter | remainingTime}}</span>
                             </p>
                         </div>
@@ -601,7 +611,7 @@
 
     <script src="js/vendors-2b99bcac3a.js"></script>
 
-    <script src="js/app-b21bc80595.js"></script>
+    <script src="js/app-d4f0e7ec4f.js"></script>
 
 
 
