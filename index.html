@@ -334,7 +334,7 @@
           <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1 class="text-center" >Latest News</h1>
+                    <h1 class="text-center">Latest News</h1>
                     <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
                 </div>
             </div>
@@ -386,8 +386,8 @@
               <h1>Venues</h1>
               <div class="col-xs-12 col-sm-6 social">
                 <h2>Pre-Party <br><span class="small">1st November</span></h2>
-                <p>Various venues around Dublin</p>
-                <a href="https://www.google.ie/maps/place/Temple+Bar,+Dublin/@53.3451022,-6.2681806,16z/data=!4m5!3m4!1s0x48670e9cb559ea73:0x2600c7a819c83012!8m2!3d53.3450903!4d-6.2638032" target="_blank">
+                <p>7pm Exchequer Pub, Dublin 2 </p>
+                <a href="https://goo.gl/maps/ULu6GmbRDsj" target="_blank">
                   <div class="map"></div>
                 </a>
               </div>
@@ -536,7 +536,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <div class="ticket-box ticket-primary">
+                        <div class="ticket-box" ng-class="{'ticket-primary':home.counter > 0, 'ticket-faded sold':home.counter < 0}">
                             <div class="ticket-header">
                                 <p class="ticket-name">Regular Ticket</p>
                             </div>
@@ -545,14 +545,15 @@
                                 <p class="ticket-exvat">€350 Inc VAT</p>
                             </div>
                             <div class="ticket-footer">
-                              <a href="https://ti.to/initiate/uxdx-2016/with/7aa1meymyd4" class="tito-button">
+                              <button ng-if="home.counter < 0" ng-cloak class="ticket-button btn">Sold Out</button>
+                              <a ng-if="home.counter > 0" ng-cloak href="https://ti.to/initiate/uxdx-2016/with/7aa1meymyd4" class="tito-button">
                                 <tito-button event="initiate/uxdx-2016" releases="7aa1meymyd4" ssl-check-disabled>Book Now</tito-button>
                               </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <div class="ticket-box">
+                        <div class="ticket-box" ng-class="{'ticket-primary':home.counter < 0}">
                             <div class="ticket-header">
                                 <p class="ticket-name">Late Purchase</p>
                             </div>
@@ -561,10 +562,10 @@
                                 <p class="ticket-exvat">€450 Inc VAT</p>
                             </div>
                             <div class="ticket-footer">
-                              <button class="ticket-button btn">Coming Soon</button>
-                              <!--<a href="https://ti.to/initiate/uxdx-2016/with/7aa1meymyd4" class="tito-button">
-                                <tito-button event="initiate/uxdx-2016" releases="7aa1meymyd4" ssl-check-disabled>Book Now</tito-button>
-                              </a>-->
+                              <button ng-if="home.counter > 0" class="ticket-button btn">Coming Soon</button>
+                              <a ng-if="home.counter < 0" ng-cloak href="https://ti.to/initiate/uxdx-2016/with/jl2bzo-xbm" class="tito-button">
+                                <tito-button event="initiate/uxdx-2016" releases="jl2bzo-xbm" ssl-check-disabled>Book Now</tito-button>
+                              </a>
                             </div>
                         </div>
                     </div>
@@ -639,7 +640,7 @@
 
     <script src="js/vendors-2b99bcac3a.js"></script>
 
-    <script src="js/app-740e26f4b5.js"></script>
+    <script src="js/app-27b8cc81de.js"></script>
 
 
 
