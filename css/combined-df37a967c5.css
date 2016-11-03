@@ -353,6 +353,10 @@ header {
     height: 67px; }
   header .social-row {
     padding-top: 30px; }
+  header form {
+    padding-bottom: 40px; }
+    header form .form-group {
+      padding: 10px; }
 
 @media (min-width: 768px) {
   header .header-logo {
@@ -821,7 +825,8 @@ section#contact {
   background-repeat: repeat;
   color: white; }
   section#contact .form-group {
-    vertical-align: top; }
+    vertical-align: top;
+    padding: 10px; }
     section#contact .form-group input.form-control {
       width: 100%; }
   section#contact .form-control:focus {
@@ -900,6 +905,8 @@ section#exhibition .alternateContact {
 section#sales {
   background-color: #555555;
   color: white; }
+  section#sales .form-group {
+    padding: 10px; }
 
 footer {
   padding: 25px 0;
