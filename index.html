@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="uxdxApp"  ng-strict-di="true" ng-controller="AppCtrl as app">
   <head>
-    <title ng-bind="($title || 'Home') + ' - UXDX 2016 - The Team behind the Product - 2 November, Dublin'">UXDX Conference 2016 - Accelerating Product Succcess through a focus on User Experience (UX) and Developer Experience (DX) - 2 November, Dublin</title>
+    <title ng-bind="($title || 'Home') + ' - UXDX 2016 - The Team behind the Product - 5 October 2017, Dublin'">UXDX Conference 2016 - Accelerating Product Succcess through a focus on User Experience (UX) and Developer Experience (DX) - 5 October 2017, Dublin</title>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Join us at UXDX conference on 2 November to learn the strategies and tactics for building high performing, cross functional teams. UXDX will feature designers and developers sharing their insights on speeding up product delivery and learning cycles. ">
+    <meta name="description" content="Join us at UXDX conference on 5 October 2017 to learn the strategies and tactics for building high performing, cross functional teams. UXDX will feature designers and developers sharing their insights on speeding up product delivery and learning cycles. ">
     <meta name="author" content="Initiate Network">
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -69,10 +69,10 @@
             <li><a ui-sref="agenda">Agenda</a></li>
             <li><a ui-sref="speakers">Speakers</a></li>
             <li><a ui-sref="sponsors">Sponsors</a></li>
-            <li><a ui-sref="attendees">Attendees</a></li>
+            <!-- <li><a ui-sref="attendees">Attendees</a></li> -->
             <li><a href="https://latest.uxdxconf.com" target="_blank">Blog</a></li>
             <li><a ui-sref="exhibition" class="exhibition">Exhibition Enquiries</a></li>
-            <!-- <li><a ui-sref="tickets" class="tickets" ui-sref-opts="{reload: true, notify: true}">Tickets</a></li> -->
+            <li><a ui-sref="tickets" class="tickets" ui-sref-opts="{reload: true, notify: true}">Tickets</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -107,7 +107,7 @@
 
                         <img src="./img/logo_white.png" at ="UXDX">
 
-                        <p> <span>RDS, Dublin</span></p>
+                        <p> <span>5 October 2017 - RDS, Dublin</span></p>
                         <div class="intro-details">
                           <!-- <p class="intro-details-name">User Experience | Developer Experience</p> -->
                             <p class="intro-details-header">
@@ -130,20 +130,15 @@
                               <span class="ticker">{{home.counter | remainingTime}}</span>
                             </p>
                         </div>
-                        <div class="col-xs-12 text-center">
+                        <!-- <div class="col-xs-12 text-center"> -->
                           <!-- <h3>Register Interest in 2017</h3> -->
-                            <form id="mc-embedded-subscribe-form" action="//network.us13.list-manage.com/subscribe/post?u=1e15df91b3a8e4ca199a3e42b&amp;id=0e51377dd2" method="post" name="mc-embedded-subscribe-form" novalidate="" class="validate form-inline">
+                            <!-- <form id="mc-embedded-subscribe-form" action="//network.us13.list-manage.com/subscribe/post?u=1e15df91b3a8e4ca199a3e42b&amp;id=0e51377dd2" method="post" name="mc-embedded-subscribe-form" novalidate="" class="validate form-inline">
 
                                 <div class="form-group">
                                     <label for="MERGE1" class="sr-only">First Name</label>
                                     <input id="MERGE1" name="MERGE1" placeholder="First Name *" class="form-control" required data-validation-required-message="Please enter your first name.">
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <!-- <div class="form-group">
-                                    <label for="MERGE2" class="sr-only">Last Name</label>
-                                    <input id="MERGE2" name="MERGE2" required="" placeholder="Last Name *" class="form-control" data-validation-required-message="Please enter your last name.">
-                                    <p class="help-block text-danger"></p>
-                                </div> -->
                                 <div class="form-group">
                                     <label for="MERGE0" class="sr-only">Email Address</label>
                                     <input id="MERGE0" type="email" name="MERGE0" required="" placeholder="Email Address *" class="form-control" data-validation-required-message="Please enter your email address.">
@@ -152,8 +147,8 @@
                                 <div style="position: absolute; left: -5000px"><input name="b_1e15df91b3a8e4ca199a3e42b_0e51377dd2" tabindex="-1"></div>
                                 <br>
                                 <button type="submit" class="btn btn-lg btn-xl-inverse">Register interest for 2017</button>
-                            </form>
-                        </div>
+                            </form> -->
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -471,7 +466,7 @@
         </section>
 
         <!-- Tickets Grid Section -->
-         <!-- <section id="tickets">
+         <section id="tickets">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -485,24 +480,27 @@
                     </div>
                 </div>
                 <div class="row">
-                  <a href="https://ti.to/initiate/uxdx-2017" class="page-scroll btn btn-xl">Register your interest for 2017</a> -->
-                    <!-- <div class="col-xs-12 col-sm-3">
-                        <div class="ticket-box ticket-faded sold">
+                    <div class="col-xs-12 col-sm-3">
+                        <div class="ticket-box ticket-primary">
                             <div class="ticket-header">
-                                <p class="ticket-name">Super Early</p>
+                                <p class="ticket-name">2 For 1</p>
                             </div>
                             <div class="ticket-details">
-                                <p class="ticket-cost">€125</p>
-                                <p class="ticket-exvat">€102 Ex VAT</p>
-                                <p class="ticket-description">(Ends on 19/08/2016)</p>
+                                <p class="ticket-cost">€365</p>
+                                <p class="ticket-exvat">€449 inc VAT</p>
+                                <!-- <p class="ticket-description">(Ends on 19/08/2016)</p> -->
                             </div>
                             <div class="ticket-footer">
-                              <button class="ticket-button btn">Sold Out</button>
+                              <a href="https://ti.to/initiate/uxdx-2016/with/jl2bzo-xbm" class="tito-button">
+                                <!-- <tito-button event="initiate/uxdx-2016" releases="jl2bzo-xbm" ssl-check-disabled> -->
+                                  Book Now
+                                <!-- </tito-button> -->
+                              </a>
                             </div>
                         </div>
-                    </div> -->
-                    <!--<div class="col-xs-12 col-sm-4">
-                        <div class="ticket-box ticket-faded sold">
+                    </div>
+                    <!-- <div class="col-xs-12 col-sm-4">
+                        <div class="ticket-box">
                             <div class="ticket-header">
                                 <p class="ticket-name">Super Early</p>
                             </div>
@@ -514,7 +512,7 @@
                               <button class="ticket-button btn">Sold Out</button>
                             </div>
                         </div>
-                    </div>-->
+                    </div> -->
                     <!-- <div class="col-xs-12 col-sm-4">
                         <div class="ticket-box ticket-faded sold">
                             <div class="ticket-header">
@@ -563,9 +561,9 @@
                             </div>
                         </div>
                     </div> -->
-                <!-- </div>
+                </div>
             </div>
-        </section> -->
+        </section>
       <!-- </div>
 
     </div> -->
@@ -655,7 +653,7 @@
 
     <script src="js/vendors-2b99bcac3a.js"></script>
 
-    <script src="js/app-9d953ba86e.js"></script>
+    <script src="js/app-18a9ce8fed.js"></script>
 
 
 
