@@ -409,38 +409,37 @@ section {
   text-transform: none;
   line-height: 1.5em; }
 
-#about .about-list {
+#sales .about-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: top; }
-  #about .about-list .about-section {
+  #sales .about-list .about-section {
     padding-top: 50px;
     display: flex; }
-    #about .about-list .about-section .about-box {
+    #sales .about-list .about-section .about-box {
       margin: 0px 10px;
-      border-bottom: 1px dashed #555555;
+      border-bottom: 1px dashed white;
       border-radius: 5px; }
-      #about .about-list .about-section .about-box .about-box-header {
+      #sales .about-list .about-section .about-box .about-box-header {
         padding: 10px 20px;
         margin: 0px;
-        color: #555555;
         font-weight: bold;
         text-align: center; }
-        #about .about-list .about-section .about-box .about-box-header.first {
+        #sales .about-list .about-section .about-box .about-box-header.first {
           border-bottom: 2px solid #3CA2EB; }
-        #about .about-list .about-section .about-box .about-box-header.second {
+        #sales .about-list .about-section .about-box .about-box-header.second {
           border-bottom: 2px solid #b12a1c; }
-        #about .about-list .about-section .about-box .about-box-header.third {
+        #sales .about-list .about-section .about-box .about-box-header.third {
           border-bottom: 2px solid #02a8ce; }
-        #about .about-list .about-section .about-box .about-box-header.fourth {
+        #sales .about-list .about-section .about-box .about-box-header.fourth {
           border-bottom: 2px solid purple; }
-      #about .about-list .about-section .about-box .about-box-content {
+      #sales .about-list .about-section .about-box .about-box-content {
         padding: 20px; }
 
 @media (min-width: 992px) {
-  #about .about-list .about-section .about-box .about-box-header {
+  #sales .about-list .about-section .about-box .about-box-header {
     min-height: 90px; } }
 
 #features .about-icons {
